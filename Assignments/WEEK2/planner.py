@@ -104,12 +104,6 @@ if __name__ == '__main__':
         1 means obstacle and 0 means clear path that bot can take.
         In the plot, the red is the calculated path, black the obastacels and blue the available nodes
     """
-
-    # maze = [[0, 1, 0, 0, 0, 0],
-    #         [0, 1, 0, 0, 0, 0],
-    #         [0, 1, 0, 1, 0, 0],
-    #         [0, 1, 0, 0, 1, 0],
-    #         [0, 0, 0, 0, 1, 0]]
     maze = [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
