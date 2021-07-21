@@ -84,8 +84,10 @@ def search(start, goal, maze):
 
         for child in children:
             # already visited node so skipping that 
-            if child in visited_list:  
+            if len([i for i in visited_list if child.x == i.x and child.y == i.y]) > 0:
                 continue
+            # if child in visited_list:  
+            #     continue
 
             child.g = current_node.g + cost
             child.h = (((child.x - goal_node.x) ** 2) + ((child.y - goal_node.y) ** 2)) 
@@ -93,7 +95,7 @@ def search(start, goal, maze):
 
             # if child is already in yet_to_visit_list child cost is more 
             # ie the current path to that node is longer and skip that
-            if len([i for i in yet_to_visit_list if child == i and child.g > i.g]) > 0:
+            if len([i for i in yet_to_visit_list if child.x == i.x and child.y == i.y and child.g > i.g]) > 0:
                 continue
 
             yet_to_visit_list.append(child)
